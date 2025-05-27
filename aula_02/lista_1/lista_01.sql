@@ -47,3 +47,15 @@ WHERE
         descricao LIKE 'C%' OR 
         descricao LIKE 'B%'
     );
+
+ALTER TABLE medicamento
+ADD COLUMN margem_de_lucro DECIMAL(5,2) NOT NULL DEFAULT 42.87;
+
+SELECT
+    descricao,
+    preco_custo,
+    preco_custo * margem_de_lucro / 100 AS preco_venda,
+ORDER BY
+    preco_custo DESC;
+
+    
