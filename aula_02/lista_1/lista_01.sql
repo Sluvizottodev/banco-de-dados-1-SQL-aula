@@ -58,4 +58,12 @@ SELECT
 ORDER BY
     preco_custo DESC;
 
-    
+SELECT DISTINCT principio
+FROM medicamento
+ORDER BY principio ASC;
+
+SELECT 
+    descricao, 
+    data_de_cadastro 
+FROM 
+    medicamento;
