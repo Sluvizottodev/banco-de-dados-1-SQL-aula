@@ -1,0 +1,2 @@
+ALTER TABLE livro
+ADD situacao ENUM('ATIVO', 'INATIVO') DEFAULT 'ATIVO';
