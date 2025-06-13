@@ -21,7 +21,7 @@ Este repositório reúne os exercícios resolvidos em SQL, com foco em consultas
 
 📄 O código está organizado de forma clara e legível, com o objetivo de ajudar outros estudantes ou interessados no aprendizado de SQL e Banco de Dados.
 
-## 🧠 Conteúdos Abordados
+## 🧠 Conteúdos Abordados -> Não segue a ordem das aulas
 
 1️⃣ **Consultas Básicas e Filtragem**  
 - SELECT, WHERE, LIKE, IN, BETWEEN
