@@ -47,6 +47,16 @@ Este repositório reúne os exercícios resolvidos em SQL, com foco em consultas
 8️⃣ **Criação de Banco de Dados e Tabelas**  
 - CREATE DATABASE, CREATE TABLE, ALTER TABLE
 
+9️⃣ **Regras de Integridade**  
+- PRIMARY KEY, FOREIGN KEY  
+- NOT NULL, UNIQUE, CHECK, DEFAULT  
+- Integridade referencial e restrições de domínio
+
+🔟 **Views (Visões)**  
+- Criação de views com `CREATE VIEW`  
+- Atualização e exclusão com `UPDATE` e `DROP VIEW`  
+- Views para simplificação de consultas complexas
+
 ## 🛠️ Como Usar
 
 ### Pré-requisitos
@@ -63,6 +73,5 @@ Certifique-se de ter o XAMPP instalado e configurado corretamente para executar 
 
 1. Instale o **XAMPP** e inicie o **Apache** e o **MySQL**.
 2. Acesse o **phpMyAdmin** ou qualquer outra interface de gerenciamento MySQL.
-3. Crie um banco de dados para os exercícios ou utilize um banco de dados existente (Não será disponibilizado a base de dados dos eercícios).
+3. Crie um banco de dados para os exercícios ou utilize um banco de dados existente (Não será disponibilizado a base de dados dos exercícios).
 4. Importe os scripts SQL deste repositório e execute-os no MySQL.
-
