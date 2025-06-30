@@ -30,10 +30,15 @@ CREATE TABLE IF NOT EXISTS livro (
         ON UPDATE CASCADE
 );
 
--- CIDADE
-CREATE TABLE IF NOT EXISTS cidade (
+-- EMPRESTIMO
+CREATE TABLE IF NOT EXISTS emprestimo (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(30) NOT NULL UNIQUE
+    exemplar_id INT NOT NULL,
+    aluno_matricula INT NOT NULL,
+    funcionario_id INT NOT NULL,
+    data_emprestimo DATETIME NOT NULL,
+    data_devolucao DATETIME NOT NULL,
+    FOREIGN KEY () --continuar daq dps
 )
 
 -- ALUNO
@@ -45,4 +50,10 @@ CREATE TABLE IF NOT EXISTS aluno (
     FOREIGN KEY(cidade_id) REFERENCES cidade(id)
         ON DELETE RESTRICT,
         ON UPDATE CASCADE
+)
+
+-- CIDADE
+CREATE TABLE IF NOT EXISTS cidade (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(30) NOT NULL UNIQUE
 )
