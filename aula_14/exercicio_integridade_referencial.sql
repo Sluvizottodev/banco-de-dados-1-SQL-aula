@@ -26,7 +26,14 @@ CREATE TABLE IF NOT EXISTS livro (
         ON DELETE RESTRICT -- Restrição de exclusão caso exista livro com tal editora
         ON UPDATE CASCADE, -- atualiza automaticamente o id da tabela filho caso a pai seja alterado
     FOREIGN KEY (assunto_id) REFERENCES assunto(id)
-        ON DELETE RESTRICT 
-        ON UPDATE CASCADE,
+        ON DELETE RESTRICT,
+        ON UPDATE CASCADE
 );
+
+-- CIDADE
+CREATE TABLE IF NOT EXISTS cidade (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(30) NOT NULL UNIQUE
+)
+
 
