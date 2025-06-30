@@ -36,4 +36,13 @@ CREATE TABLE IF NOT EXISTS cidade (
     nome VARCHAR(30) NOT NULL UNIQUE
 )
 
-
+-- ALUNO
+CREATE TABLE IF NOT EXISTS aluno (
+    matricula INT(11) NOT NULL PRIMARY KEY,
+    cidade_id INT NOT NULL, 
+    nome VARCHAR(40) NOT NULL,
+    data_nascimento DATE NOT NULL,
+    FOREIGN KEY(cidade_id) REFERENCES cidade(id)
+        ON DELETE RESTRICT,
+        ON UPDATE CASCADE
+)
