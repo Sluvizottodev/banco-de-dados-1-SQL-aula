@@ -3,15 +3,30 @@
 
 CREATE DATABASE biblioteca2025;
 USE biblioteca2025;
--- ASSUNTOS
-CREATE TABLE IF NOT EXISTS assuntos (
+-- ASSUNTO
+CREATE TABLE IF NOT EXISTS assunto (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(30) NOT NULL UNIQUE
 ) ENGINE=INNODB;
 
--- EDITORAS
-CREATE TABLE IF NOT EXISTS editoras (
+-- EDITORA
+CREATE TABLE IF NOT EXISTS editora (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(30) NOT NULL UNIQUE, 
-)
+    nome VARCHAR(30) NOT NULL UNIQUE 
+) ENGINE=INNODB;
+
+-- LIVRO
+CREATE TABLE IF NOT EXISTS livro (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    editora_id INT NOT NULL,
+    assunto_id INT NOT NULL,
+    titulo VARCHAR(60) NOT NULL UNIQUE,
+    ano_publicacao VARCHAR(4) NOT NULL,
+    FOREIGN KEY (editora_id) REFERENCES editora(id)
+        ON DELETE RESTRICT -- Restrição de exclusão caso exista livro com tal editora
+        ON UPDATE CASCADE, -- atualiza automaticamente o id da tabela filho caso a pai seja alterado
+    FOREIGN KEY (assunto_id) REFERENCES assunto(id)
+        ON DELETE RESTRICT 
+        ON UPDATE CASCADE,
+);
 
