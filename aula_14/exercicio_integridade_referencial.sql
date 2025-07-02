@@ -67,7 +67,9 @@ CREATE TABLE IF NOT EXISTS emprestimo (
     funcionario_id INT NOT NULL,
     data_emprestimo DATETIME NOT NULL,
     data_devolucao DATETIME NOT NULL,
-    FOREIGN KEY () --continuar daq dps
+    FOREIGN KEY (exempalr_id) REFERENCES exemplar(id)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE
 ) ENGINE=INNODB;
 
 -- ALUNO
